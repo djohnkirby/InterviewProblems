@@ -56,3 +56,29 @@ TEST(OneAway,InsertionRemoval)
 	EXPECT_FALSE(OneAway("age","rager"));
 	EXPECT_FALSE(OneAway("meanie","main"));
 }
+
+TEST(Fibonacci,Recursive_Edge)
+{
+	EXPECT_EQ(Fibonacci(-1),0);
+	EXPECT_EQ(Fibonacci(-1000),0);
+}
+
+TEST(Fibonacci,Recursive_Trivial)
+{
+	EXPECT_EQ(Fibonacci(0),1);
+	EXPECT_EQ(Fibonacci(1),1);
+	EXPECT_EQ(Fibonacci(24),75025);
+}
+
+TEST(Fibonacci,Iterative_Edge)
+{
+	EXPECT_EQ(Fibonacci_Iterative(-1),0);
+	EXPECT_EQ(Fibonacci_Iterative(-1000),0);
+}
+
+TEST(Fibonacci,Iterative_Trivial)
+{
+	EXPECT_EQ(Fibonacci_Iterative(0),1);
+	EXPECT_EQ(Fibonacci_Iterative(1),1);
+	EXPECT_EQ(Fibonacci_Iterative(24),75025);
+}

@@ -114,4 +114,45 @@ bool OneAway( std::string str1, std::string str2 )
 
 
 }
- 
+
+int Fibonacci( int n )
+{
+	//Early out all non-valid inputs
+	if (n < 0)
+		return 0;
+
+	if (n == 0)
+		return 1;
+	else if (n == 1)
+		return 1;
+	else
+		return Fibonacci(n-1) + Fibonacci(n-2);
+}
+
+int Fibonacci_Iterative( int n )
+{
+    //Early out all non-valid inputs
+	if (n < 0)
+		return 0;
+
+	if (n == 0)
+		return 1;
+	else if (n == 1)
+		return 1;
+
+	int fib1, fib2, result;
+	int i = 0;
+	fib1 = 1;
+	fib2 = 1;
+	result = 0;
+
+	while( i < n -1 )
+	{
+		result = fib1 + fib2;
+		fib1 = fib2;
+		fib2 = result;
+		i++;
+	}
+
+	return result;
+}

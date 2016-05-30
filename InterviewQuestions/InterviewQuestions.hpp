@@ -10,4 +10,8 @@ bool IsUnique_sort( std::string input );
 
 //OneAway
 bool OneAway( std::string str1, std::string str2 );
+
+//Fibonacci
+int Fibonacci( int n );
+int Fibonacci_Iterative( int n );
 #endif
