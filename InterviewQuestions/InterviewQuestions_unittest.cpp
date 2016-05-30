@@ -52,6 +52,7 @@ TEST(OneAway,InsertionRemoval)
 	EXPECT_TRUE(OneAway("ple","pale"));
 	EXPECT_TRUE(OneAway("rage","raged"));
 	EXPECT_TRUE(OneAway("age","rage"));
+	EXPECT_TRUE(OneAway("cute","cut"));
 
 	EXPECT_FALSE(OneAway("age","rager"));
 	EXPECT_FALSE(OneAway("meanie","main"));
@@ -67,6 +68,7 @@ TEST(Fibonacci,Recursive_Trivial)
 {
 	EXPECT_EQ(Fibonacci(0),1);
 	EXPECT_EQ(Fibonacci(1),1);
+	EXPECT_EQ(Fibonacci(2),2);
 	EXPECT_EQ(Fibonacci(24),75025);
 }
 
@@ -80,5 +82,6 @@ TEST(Fibonacci,Iterative_Trivial)
 {
 	EXPECT_EQ(Fibonacci_Iterative(0),1);
 	EXPECT_EQ(Fibonacci_Iterative(1),1);
+	EXPECT_EQ(Fibonacci(2),2);
 	EXPECT_EQ(Fibonacci_Iterative(24),75025);
 }
